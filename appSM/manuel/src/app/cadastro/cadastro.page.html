@@ -5,5 +5,38 @@
 </ion-header>
 
 <ion-content>
+    <ion-item>
+      <ion-label position="stacked">Nome completo<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" oninput="handleNomeValue(event)"></ion-input>
+    </ion-item>
 
+    <ion-item>
+        <ion-label position="stacked">Data de nascimento<ion-text color="danger">*</ion-text></ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" placeholder=" " doneText='OK' cancelText='Voltar'></ion-datetime>
+      </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Nacionalidade<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" oninput="handleNacionalidadeValue(event)"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">CPF<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" oninput="handleCPFValue(event)"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">RG<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" oninput="handleRGValue(event)"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Endereço<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" oninput="handleEnderecoValue(event)"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Estado civil<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" oninput="handleEstadoCivilValue(event)"></ion-input>
+    </ion-item>
 </ion-content>
