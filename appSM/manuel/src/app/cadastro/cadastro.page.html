@@ -1,10 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cadastro</ion-title>
+    <ion-title>Informações Pessoais</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-card>
     <ion-item>
       <ion-label position="stacked">Nome completo<ion-text color="danger">*</ion-text></ion-label>
       <ion-input required type="text" oninput="handleNomeValue(event)"></ion-input>
@@ -39,4 +40,19 @@
       <ion-label position="stacked">Estado civil<ion-text color="danger">*</ion-text></ion-label>
       <ion-input required type="text" oninput="handleEstadoCivilValue(event)"></ion-input>
     </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Contato(s) de Emergência<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Hospital de preferência<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" oninput="handleHospitalValue(event)"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <div class="center">
+    <ion-button position="stacked" href="/cadastro-condicoes"> Próximo </ion-button>
+  </div>
 </ion-content>

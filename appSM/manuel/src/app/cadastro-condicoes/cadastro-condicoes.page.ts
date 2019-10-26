@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroCondicoesPage implements OnInit {
 
+  public htmlToAdd;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addTexto(){
+    console.log(
+      
+    )
+    this.htmlToAdd='<ion-input></ion-input>';
   }
 
 }
