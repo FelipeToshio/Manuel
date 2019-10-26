@@ -10,15 +10,13 @@
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <ion-input placeholder="Nome de usuário" ></ion-input>
-      <ion-input type="password" placeholder="Senha" max="6"></ion-input>
-      <ion-button>Entrar</ion-button><br>
-      <ion-button>Entrar com mídia social</ion-button><br>
-
-      <ion-label>Não é cadastrado ? Cadastre-se já!</ion-label><br>
-      <ion-button>Cadastrar</ion-button><br>
-      <ion-button size="small">Esqueci minha senha</ion-button><br>
-
+    <ion-card class="welcome-card ion-padding-top">
+        <div class="center"><ion-input placeholder="Nome de usuário" ></ion-input></div>
+        <div class="center"><ion-input type="password" placeholder="Senha" max="6"></ion-input></div>
+        <div class="center"><ion-button >Entrar</ion-button></div>
+        <div class="center"><ion-button >Entrar com mídia social</ion-button></div>
+     
+      <div class="center esqueci"><p>Não é cadastrado ? <a href="#">Cadastre-se já!</a></p></div>
+      <div class="center esqueci"><ion-button size="small">Esqueci minha senha</ion-button></div>
     </ion-card>
 </ion-content>
