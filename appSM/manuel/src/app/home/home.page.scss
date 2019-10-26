@@ -4,9 +4,21 @@
 }
 
 ion-card{
-  margin: 160px 10px;
+  margin-top: -200px;
+  top: 50%;
   display: block;
+  height: 400px;
 }
 ion-input{
-  margin-left: 50px;
+  margin: 10px 0px;
+  left: -8px;
+}
+
+
+.center{
+  text-align: center;
+}
+
+.esqueci{
+  margin-top: 40px;
 }
