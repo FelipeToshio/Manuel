@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'cadastro-problemas', loadChildren: './cadastro-problemas/cadastro-problemas.module#CadastroProblemasPageModule' },
   { path: 'cadastro-prediagnostico', loadChildren: './cadastro-prediagnostico/cadastro-prediagnostico.module#CadastroPrediagnosticoPageModule' },
   { path: 'principal', loadChildren: './principal/principal.module#PrincipalPageModule' },
-  { path: 'controle-medicacoes', loadChildren: './controle-medicacoes/controle-medicacoes.module#ControleMedicacoesPageModule' }
+  { path: 'controle-medicacoes', loadChildren: './controle-medicacoes/controle-medicacoes.module#ControleMedicacoesPageModule' },
+  { path: 'controle-remedio', loadChildren: './controle-remedio/controle-remedio.module#ControleRemedioPageModule' },
 ];
 
 @NgModule({
