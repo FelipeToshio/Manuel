@@ -44,6 +44,10 @@ export class PrincipalPage implements OnInit {
   play(file) {
     this.nativeAudio.preloadSimple('uniqueId1', file.externalRootDirectory + "/Download/novo_file.wav").then(this.onSuccess, this.onError);
     console.log('1');
-    
+    this.nativeAudio.play(this.file.externalRootDirectory + "/Download/novo_file.wav").then((res) => {
+      console.log(res);
+    }, (err) => {
+      console.log(err);
+    });
   }
 }
