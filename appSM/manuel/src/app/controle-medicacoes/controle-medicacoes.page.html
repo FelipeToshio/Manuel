@@ -10,11 +10,34 @@
 <ion-content>
   <ion-card>
     <ion-list class="remedio">
-      <h2>Remédio</h2>
+      <h2>Remédio 1</h2>
       <p>S T Q Q S S D</p>
       <p>Hora:<ion-datetime displayFormat="HH:mm" placeholder=" " doneText='OK' cancelText='Voltar'></ion-datetime></p>
       <p>Data de validade: <ion-datetime displayFormat="DD/MM/YY" placeholder=" " doneText='OK' cancelText='Voltar'></ion-datetime></p>
       <div class="center"><ion-button href="/controle-remedio">EDITAR</ion-button></div>
+      <div class="center"><ion-button (click)="publishMessage1()">Hora do Remédio</ion-button></div>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list class="remedio">
+      <h2>Remédio 2</h2>
+      <p>S T Q Q S S D</p>
+      <p>Hora:<ion-datetime displayFormat="HH:mm" placeholder=" " doneText='OK' cancelText='Voltar'></ion-datetime></p>
+      <p>Data de validade: <ion-datetime displayFormat="DD/MM/YY" placeholder=" " doneText='OK' cancelText='Voltar'></ion-datetime></p>
+      <div class="center"><ion-button href="/controle-remedio">EDITAR</ion-button></div>
+      <div class="center"><ion-button (click)="publishMessage2()">Hora do Remédio</ion-button></div>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list class="remedio">
+      <h2>Remédio 3</h2>
+      <p>S T Q Q S S D</p>
+      <p>Hora:<ion-datetime displayFormat="HH:mm" placeholder=" " doneText='OK' cancelText='Voltar'></ion-datetime></p>
+      <p>Data de validade: <ion-datetime displayFormat="DD/MM/YY" placeholder=" " doneText='OK' cancelText='Voltar'></ion-datetime></p>
+      <div class="center"><ion-button href="/controle-remedio">EDITAR</ion-button></div>
+      <div class="center"><ion-button (click)="publishMessage3()">Hora do Remédio</ion-button></div>
     </ion-list>
   </ion-card>
 </ion-content>

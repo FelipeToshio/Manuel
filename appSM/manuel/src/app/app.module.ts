@@ -8,6 +8,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { Observable } from 'rxjs/Observable';
+import {
+  IMqttMessage,
+  MqttModule,
+  MqttService
+} from 'ngx-mqtt';
+
+export const MQTT_SERVICE_OPTIONS = {
+  hostname: 'test.mosquitto.org',
+  port: 8080,
+  path: '/'
+};
+
+export function mqttServiceFactory() {
+  return new MqttService(MQTT_SERVICE_OPTIONS);
+}
 
 import {MediaCapture } from '@ionic-native/media-capture/ngx';
 import { Media } from '@ionic-native/media/ngx';
@@ -24,11 +40,15 @@ import { IonicStorageModule } from '@ionic/storage';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
+    AppRoutingModule,
     IonicStorageModule.forRoot()
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    MqttService
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     MediaCapture,
     NativeAudio,

@@ -33,12 +33,18 @@
     "@ionic/storage": "^2.2.0",
     "com.telerik.plugins.nativepagetransitions": "^0.6.5",
     "cordova-android": "8.1.0",
+    "cordova-plugin-mqtt": "^0.3.8",
     "cordova-plugin-filepath": "^1.5.6",
     "cordova-plugin-nativeaudio": "^3.0.9",
     "cordova-sqlite-storage": "^3.4.0",
     "core-js": "^2.5.4",
+    "ionic-mqtt": "^1.1.5",
+    "ng2-mqtt": "^0.1.2",
+    "ngx-mqtt": "^6.13.2",
+    "ngx-mqtt-client": "^1.3.4",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
+    "ws": "^3.3.3",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -85,6 +91,11 @@
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
       "cordova-plugin-ionic-keyboard": {},
+<<<<<<< HEAD
+      "cordova-plugin-mqtt": {}
+=======
+      "cordova-plugin-media-capture": {}
+>>>>>>> master
       "cordova-plugin-media-capture": {},
       "cordova-plugin-file": {},
       "cordova-plugin-media": {},
