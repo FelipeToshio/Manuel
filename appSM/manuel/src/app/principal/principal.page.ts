@@ -1,3 +1,6 @@
+import { Component, OnInit } from '@angular/core';
+import { IMqttMessage, MqttModule, MqttService } from 'ngx-mqtt';
+import { Observable } from 'rxjs/Observable';
 import { File } from '@ionic-native/file/ngx';
 import { Storage } from '@ionic/storage';
 import { MediaCapture } from '@ionic-native/media-capture/ngx';
@@ -19,7 +22,23 @@ export class PrincipalPage implements OnInit {
     private file: File,
     private nativeAudio: NativeAudio) { }
 
+  private sensor1: string;
+
+  constructor(private _mqttService: MqttService) { 
+    this._mqttService.observe('/bpm').subscribe((message: IMqttMessage) => 
+    {
+    this.sensor1 = message.payload.toString();
+    console.log(this.sensor1);
+    }); 
+  }
+/*
+  publishMessage()
+ {
+  this._mqttService.unsafePublish("/led", "led1-on", {qos: 0, retain: false});
+ }
+*/
   ngOnInit() {
+
   }
 
   sounds: any = [];
@@ -51,3 +70,4 @@ export class PrincipalPage implements OnInit {
     });
   }
 }
+
