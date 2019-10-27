@@ -9,18 +9,31 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import {MediaCapture } from '@ionic-native/media-capture/ngx';
+import { Media } from '@ionic-native/media/ngx';
+import { File } from '@ionic-native/file/ngx';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
+
+import { IonicStorageModule } from '@ionic/storage';
+  import { from } from 'rxjs';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    IonicStorageModule.forRoot()
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    MediaCapture,
+    NativeAudio,
+    Media,
+    File
   ],
   bootstrap: [AppComponent]
 })
