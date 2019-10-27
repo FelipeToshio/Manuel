@@ -12,18 +12,18 @@ export class PrincipalPage implements OnInit {
   private sensor1: string;
 
   constructor(private _mqttService: MqttService) { 
-    this._mqttService.observe('led').subscribe((message: IMqttMessage) => 
+    this._mqttService.observe('/bpm').subscribe((message: IMqttMessage) => 
     {
     this.sensor1 = message.payload.toString();
     console.log(this.sensor1);
     }); 
   }
-
+/*
   publishMessage()
  {
   this._mqttService.unsafePublish("/led", "led1-on", {qos: 0, retain: false});
  }
-
+*/
   ngOnInit() {
 
   }

@@ -11,7 +11,7 @@
   <ion-card>
     <div class="bpm">
       <div class="valor">
-        <span>90</span>
+        <span>{{this.sensor1}}</span>
         <span style="font-size: 200%;">bpm</span>
       </div>  
       <div class="valorbpm"></div>
@@ -41,9 +41,4 @@
           <ion-button expand="full" color="secondary" href="/controle-medicacoes">Controle sua medicação</ion-button>
         </section>
   </ion-card>
-</ion-content>
-
-<ion-content>
-  <ion-button (click)="sendMessage()">Send Message</ion-button>
-  <ion-button (click)="publishMessage()">Publish Message</ion-button>
 </ion-content>
