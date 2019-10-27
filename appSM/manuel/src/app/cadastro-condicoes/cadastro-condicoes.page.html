@@ -1,9 +1,111 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cadastroCondicoes</ion-title>
+    <div style="text-align: center;"><ion-title>Cadastro</ion-title></div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <h1>cheguei</h1>
+    <ion-list>
+      <ion-label> 1. Fumante?<ion-text color="danger">*</ion-text></ion-label>
+      <ion-radio-group>
+        <ion-item>
+          <ion-label>Não</ion-label>
+          <ion-radio slot="start" value="naoFumante" checked><ion-text>Não</ion-text></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Sim</ion-label>
+          <ion-radio slot="start" value="fumante"></ion-radio>
+        </ion-item>
+      </ion-radio-group> 
+    </ion-list>
+
+  <ion-list>
+    <ion-label> 2. Parou de fumar?<ion-text color="danger">*</ion-text></ion-label>
+    <ion-radio-group>
+      <ion-item>
+        <ion-label>Não</ion-label>
+        <ion-radio slot="start" value="parouFumar" checked><ion-text>Não</ion-text></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sim</ion-label>
+        <ion-radio slot="start" value="Fuma"></ion-radio>
+      </ion-item>
+    </ion-radio-group> 
+  </ion-list>
+
+  <ion-list>
+    <ion-label> 3. Ingere bebidas alcoolicas?<ion-text color="danger">*</ion-text></ion-label>
+    <ion-radio-group>
+      <ion-item>
+        <ion-label>Não</ion-label>
+        <ion-radio slot="start" value="naoBebe" checked><ion-text>Não</ion-text></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Diariamente</ion-label>
+        <ion-radio slot="start" value="bebeTodoDia"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fins de semana</ion-label>
+        <ion-radio slot="start" value="bebeFds"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>3 vezes por semana</ion-label>
+        <ion-radio slot="start" value="bebe3x"></ion-radio>
+      </ion-item>
+    </ion-radio-group> 
+  </ion-list>
+
+  <ion-list>
+    <ion-label> 4. Pratica esportes/atividade física?<ion-text color="danger">*</ion-text></ion-label>
+    <ion-radio-group>
+      <ion-item>
+        <ion-label>Não</ion-label>
+        <ion-radio slot="start" value="naoAtiv" checked><ion-text>Não</ion-text></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>1 vez por semana</ion-label>
+        <ion-radio slot="start" value="ativ1x"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>2 vezes por semana</ion-label>
+        <ion-radio slot="start" value="ativ2x"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>3 vezes por semana</ion-label>
+        <ion-radio slot="start" value="ativ3x"></ion-radio>
+      </ion-item>
+    </ion-radio-group> 
+  </ion-list>
+
+  <ion-list>
+    <ion-label> 5. Submeteu-se a cirurgia(s)?<ion-text color="danger">*</ion-text></ion-label>
+    <ion-radio-group>
+      <ion-item>
+        <ion-label>Não</ion-label>
+        <ion-radio slot="start" value="nao" checked><ion-text>Não</ion-text></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sim</ion-label>
+        <ion-radio slot="start" value="sim" (click)="addTexto()"></ion-radio>
+      </ion-item>
+    </ion-radio-group> 
+  </ion-list>
+
+  <ion-list>
+    <ion-label> 6. Usa medicamento com frequência?<ion-text color="danger">*</ion-text></ion-label>
+    <ion-radio-group>
+      <ion-item>
+        <ion-label>Não</ion-label>
+        <ion-radio slot="start" value="sim" checked><ion-text>Não</ion-text></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sim</ion-label>
+        <ion-radio slot="start" value="nao"></ion-radio>
+      </ion-item>
+    </ion-radio-group> 
+  </ion-list>
+
+  <div class="center">
+      <ion-button position="stacked" href="/cadastro-historico"> Próximo </ion-button>
+  </div>
 </ion-content>
