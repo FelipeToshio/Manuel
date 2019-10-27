@@ -91,11 +91,7 @@
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
       "cordova-plugin-ionic-keyboard": {},
-<<<<<<< HEAD
-      "cordova-plugin-mqtt": {}
-=======
-      "cordova-plugin-media-capture": {}
->>>>>>> master
+      "cordova-plugin-mqtt": {},
       "cordova-plugin-media-capture": {},
       "cordova-plugin-file": {},
       "cordova-plugin-media": {},
