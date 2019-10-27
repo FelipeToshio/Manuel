@@ -8,6 +8,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { Observable } from 'rxjs/Observable';
+import {
+  IMqttMessage,
+  MqttModule,
+  MqttService
+} from 'ngx-mqtt';
+
+export const MQTT_SERVICE_OPTIONS = {
+  hostname: 'test.mosquitto.org',
+  port: 8080,
+  path: '/'
+};
+
+export function mqttServiceFactory() {
+  return new MqttService(MQTT_SERVICE_OPTIONS);
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,12 +31,14 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    MqttService
   ],
   bootstrap: [AppComponent]
 })
