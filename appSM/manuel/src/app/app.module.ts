@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { Observable } from 'rxjs/Observable';
+import {MediaCapture } from '@ionic-native/media-capture/ngx';
+import { Media } from '@ionic-native/media/ngx';
+import { File } from '@ionic-native/file/ngx';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
+import { IonicStorageModule } from '@ionic/storage';
+import { from } from 'rxjs';
+//import { Observable } from 'rxjs/Observable';
 import {
   IMqttMessage,
   MqttModule,
@@ -25,13 +29,7 @@ export function mqttServiceFactory() {
   return new MqttService(MQTT_SERVICE_OPTIONS);
 }
 
-import {MediaCapture } from '@ionic-native/media-capture/ngx';
-import { Media } from '@ionic-native/media/ngx';
-import { File } from '@ionic-native/file/ngx';
-import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
-import { IonicStorageModule } from '@ionic/storage';
-  import { from } from 'rxjs';
 
 @NgModule({
   declarations: [AppComponent],
@@ -48,8 +46,7 @@ import { IonicStorageModule } from '@ionic/storage';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    MqttService
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    MqttService,
     MediaCapture,
     NativeAudio,
     Media,

@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { IMqttMessage, MqttModule, MqttService } from 'ngx-mqtt';
-import { Observable } from 'rxjs/Observable';
+//import { Observable } from 'rxjs/Observable';
 import { File } from '@ionic-native/file/ngx';
 import { Storage } from '@ionic/storage';
 import { MediaCapture } from '@ionic-native/media-capture/ngx';
 import { Media, MediaObject } from '@ionic-native/media/ngx';
-import { Component, OnInit, Injectable } from '@angular/core';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 const MEDIA_FILES_KEY = 'mediaFIles';
@@ -20,17 +19,17 @@ export class PrincipalPage implements OnInit {
     private storage: Storage,
     private media: Media,
     private file: File,
-    private nativeAudio: NativeAudio) { }
-
-  private sensor1: string;
-
-  constructor(private _mqttService: MqttService) { 
-    this._mqttService.observe('/bpm').subscribe((message: IMqttMessage) => 
+    private nativeAudio: NativeAudio,
+    private _mqttService: MqttService) {
+      this._mqttService.observe('/bpm').subscribe((message: IMqttMessage) => 
     {
     this.sensor1 = message.payload.toString();
     console.log(this.sensor1);
     }); 
-  }
+     }
+
+  private sensor1: string;
+
 /*
   publishMessage()
  {
